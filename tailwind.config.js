@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "phone-background": "url('/src/assets/phone/default_wallpaper.webp')"
+      }
+    },
   },
   plugins: [],
 }
