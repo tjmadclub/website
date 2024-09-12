@@ -9,8 +9,10 @@ export default function PhoneContainer({ children }: React.PropsWithChildren) {
                 className="z-10 w-full h-full object-contain"
             />
             <div className="absolute top-0 bottom-0 w-full h-full flex justify-center items-center px-[1.25rem] pb-4 pt-3">
-                <div className="flex-grow px-4 pb-8 pt-2 w-full h-full flex justify-center items-center flex-col bg-phone-background bg-cover bg-center">
-                    {children}
+                <div className="flex-grow px-4 pb-8 pt-2 w-full h-full bg-phone-background bg-cover bg-center">
+                    <div className="relative w-full h-full flex justify-center items-center flex-col z-20">
+                        {children}
+                    </div>
                 </div>
             </div>
         </div>
