@@ -20,6 +20,7 @@ export default function PhoneApp({
             <a 
                 className="overflow-hidden w-12 h-12 p-1 cursor-pointer"
                 href={link}
+                target="_blank"
             >
                 {logoImage}
             </a>

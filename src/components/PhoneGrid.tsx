@@ -17,5 +17,5 @@ export default function PhoneGrid({ apps }: PhoneGridProps) {
         <div className="grid grid-cols-4 gap-4 mt-8">
             {appsInGrid}
         </div>
-    )
+    );
 }
