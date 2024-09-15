@@ -1,17 +1,18 @@
-import PhoneContainer from "@/components/PhoneContainer";
-import PhoneDock from "@/components/PhoneDock";
-import PhoneHeader from "@/components/PhoneHeader";
+import Phone from "@/components/phone/Phone";
+import usePhoneStore from "@/store/phone";
+import { useEffect } from "react";
+import { defaultViews } from "@/views/index";
 
 export default function App() {
+    const setViews = usePhoneStore((state) => state.setViews);
+
+    useEffect(() => {
+        setViews(defaultViews);
+    }, [setViews]);
+
     return (
         <main className="flex flex-col items-center justify-center min-h-screen">
-            <PhoneContainer>
-                <PhoneHeader
-                    // Testing how time looks with the current font and location 
-                    leftSide={<span className="font-bold">7:27</span>}
-                />
-                <PhoneDock />
-            </PhoneContainer>
+            <Phone />
         </main>
     );
 }

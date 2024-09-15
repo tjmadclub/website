@@ -1,4 +1,4 @@
-import PhoneApp from "@/components/PhoneApp";
+import PhoneApp from "@/components/phone/PhoneApp";
 import notesLogo from "@/assets/phone/apps/notes.webp";
 import safariLogo from "@/assets/phone/apps/safari.webp";
 import settingsLogo from "@/assets/phone/apps/settings.webp";
