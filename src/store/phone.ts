@@ -7,7 +7,7 @@ interface PhoneState {
     viewIndex: number;
     isDiverged: boolean;
     divergence: React.ReactNode;
-    setDivergence: (view: React.ReactNode) => void;
+    setDivergence: (diverge: boolean, view?: React.ReactNode) => void;
     incrementIndex: () => void;
     decrementIndex: () => void;
 }
@@ -17,7 +17,7 @@ const usePhoneStore = create<PhoneState>()((set) => ({
     viewIndex: 0,
     isDiverged: false,
     divergence: null,
-    setDivergence: (view: React.ReactNode) => set(() => ({ isDiverged: true, divergence: view })),
+    setDivergence: (diverge: boolean, view?: React.ReactNode) => set(() => ({ isDiverged: diverge, divergence: view })),
     incrementIndex: () => set((state) => ({ viewIndex: state.viewIndex + 1 })),
     decrementIndex: () => set((state) => ({ viewIndex: state.viewIndex - 1 })),
 }));

@@ -17,6 +17,7 @@ function divergeToOfficerView(name: string, image: string, title: string, descri
     const setDivergence = usePhoneStore.getState().setDivergence;
 
     setDivergence(
+        true,
         <OfficerView 
             name={name}
             image={image}
