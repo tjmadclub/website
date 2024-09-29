@@ -19,6 +19,8 @@ export default function PhoneScreenList({ children }: React.PropsWithChildren) {
 
     const handleSwipeDrag = (event: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
         if (isDragging) {
+            event.preventDefault();
+
             const dy = unify(event).clientY - startY;
             if (dy < 0) 
                 setDragY(dy);
@@ -27,7 +29,7 @@ export default function PhoneScreenList({ children }: React.PropsWithChildren) {
 
     const handleSwipeRelease = (event: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
         if (isDragging) {
-            const threshold = event.target ? (event.target as HTMLDivElement).offsetHeight * 0.4 : 0;
+            const threshold = event.target ? (event.target as HTMLDivElement).offsetHeight * 0.2 : 0;
             
             if (Math.abs(dragY) > threshold) {
                 setDivergence(false);
@@ -39,22 +41,24 @@ export default function PhoneScreenList({ children }: React.PropsWithChildren) {
     };
     
     return (
-        <div 
-            className="absolute top-0 h-full w-full pt-[2%] sm:pt-[5%] pb-[4%] pr-[38%] sm:pr-[4%] overflow-hidden z-10"
-            style={{ 
-                transform: `translateY(${dragY}px)`,
-                transition: isDragging ? "none" : "transform 0.3s ease-out" 
-            }}
-            onMouseDown={handleSwipeHold}
-            onTouchStart={handleSwipeHold}
-            onMouseMove={handleSwipeDrag}
-            onTouchMove={handleSwipeDrag}
-            onMouseUp={handleSwipeRelease}
-            onTouchEnd={handleSwipeRelease}
-            onMouseLeave={handleSwipeRelease}
-            onTouchCancel={handleSwipeRelease}
-        >
-            {children}
+        <div className="absolute top-0 h-full w-full mt-[3%] sm:mt-[5%] pb-[10%] pr-[38%] sm:pr-[4%] overflow-hidden z-10">
+            <div 
+                className="h-full w-full"
+                style={{ 
+                    transform: `translateY(${dragY}px)`,
+                    transition: isDragging ? "none" : "transform 0.3s ease-out" 
+                }}
+                onMouseDown={handleSwipeHold}
+                onTouchStart={handleSwipeHold}
+                onMouseMove={handleSwipeDrag}
+                onTouchMove={handleSwipeDrag}
+                onMouseUp={handleSwipeRelease}
+                onTouchEnd={handleSwipeRelease}
+                onMouseLeave={handleSwipeRelease}
+                onTouchCancel={handleSwipeRelease}
+            >
+                {children}
+            </div>
         </div>
     );
 }

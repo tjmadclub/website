@@ -24,9 +24,6 @@ export default function Phone() {
                         <PhoneDivergence>
                             {divergence}
                         </PhoneDivergence>
-                        // <div className="absolute top-0 h-full w-full pt-[2%] sm:pt-[5%] pb-[4%] pr-[38%] sm:pr-[4%] overflow-hidden z-10">
-                        //     {divergence}
-                        // </div>
                     }
                     <PhoneScreenList />
                     <PhoneDock />
