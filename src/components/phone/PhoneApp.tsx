@@ -13,12 +13,12 @@ export default function PhoneApp({
     link, 
     onClick 
 }: PhoneAppProps) {
-    const logoImage = <img src={logo} className="h-full w-full object-cover rounded-lg" />;
+    const logoImage = <img src={logo} className="object-cover rounded-md" />;
     
     return isLink 
         ? (
             <a 
-                className="overflow-hidden w-12 h-12 p-1 cursor-pointer"
+                className="overflow-hidden w-full h-full p-1 cursor-pointer"
                 href={link}
                 target="_blank"
             >
@@ -27,7 +27,7 @@ export default function PhoneApp({
         ) 
         : (
             <button
-                className="overflow-hidden w-12 h-12 p-1"
+                className="overflow-hidden w-full h-full p-1"
                 onClick={onClick}
             >
                 {logoImage}

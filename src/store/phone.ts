@@ -1,4 +1,5 @@
 import { PhoneGridAppList } from "@/components/phone/PhoneGrid";
+import { defaultViews } from "@/views";
 import { create } from "zustand";
 
 interface PhoneState {
@@ -9,18 +10,16 @@ interface PhoneState {
     setDivergence: (view: React.ReactNode) => void;
     incrementIndex: () => void;
     decrementIndex: () => void;
-    setViews: (views: PhoneGridAppList[]) => void;
 }
 
 const usePhoneStore = create<PhoneState>()((set) => ({
-    views: [],
+    views: defaultViews,
     viewIndex: 0,
     isDiverged: false,
     divergence: null,
     setDivergence: (view: React.ReactNode) => set(() => ({ isDiverged: true, divergence: view })),
     incrementIndex: () => set((state) => ({ viewIndex: state.viewIndex + 1 })),
     decrementIndex: () => set((state) => ({ viewIndex: state.viewIndex - 1 })),
-    setViews: (views: PhoneGridAppList[]) => set(() => ({ views: views })),
 }));
 
 export default usePhoneStore;

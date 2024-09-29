@@ -8,7 +8,7 @@ export interface OfficerViewProps {
 // Temporary - testing diverging views
 export default function OfficerView({ name, image, title, description }: OfficerViewProps) {
     return (
-        <div className="absolute h-full w-full bg-gray-900 text-white">
+        <div className="h-full w-full p-5 pt-10 break-words overflow-y-scroll z-20 bg-gray-900 text-white">
             <img 
                 src={image}
             />

@@ -1,4 +1,5 @@
 import topRightIcons from "@/assets/phone/top_right_icons.webp";
+import usePhoneStore from "@/store/phone";
 import { useEffect, useState } from "react";
 
 export interface PhoneHeaderProps {
@@ -7,6 +8,7 @@ export interface PhoneHeaderProps {
 
 export default function PhoneHeader({ leftSide }: PhoneHeaderProps) {
     const [currentTime, setCurrentTime] = useState<string>(getPhoneTime());
+    const divergence = usePhoneStore((state) => state.divergence);
     
     useEffect(() => {
         if (leftSide)
@@ -25,7 +27,7 @@ export default function PhoneHeader({ leftSide }: PhoneHeaderProps) {
     }, []);
 
     return (
-        <div className="flex justify-between items-center py-1 text-white h-8 w-full">
+        <div className={`flex justify-between min-w-full items-center px-[2%] py-1 h-8 text-white z-20 ${divergence ? "mb-auto bg-gray-800 bg-opacity-40" : ""}`}>
             <div className="flex justify-evenly items-center text-center w-[30%] h-full">
                 <span className="text-xs">
                     {
@@ -35,10 +37,10 @@ export default function PhoneHeader({ leftSide }: PhoneHeaderProps) {
                     }
                 </span>
             </div>
-            <div className="flex justify-evenly items-center h-full">
+            <div className="flex h-full">
                 <img 
                     src={topRightIcons}
-                    className="w-[90%] h-full object-contain"
+                    className="h-[90%] object-contain"
                 />
             </div>
         </div>

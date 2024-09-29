@@ -1,33 +1,33 @@
-import PhoneContainer from "@/components/phone/PhoneContainer";
 import PhoneHeader from "@/components/phone/PhoneHeader";
-import PhoneGrid, { PhoneGridAppList } from "@/components/phone/PhoneGrid";
 import PhoneDock from "@/components/phone/PhoneDock";
 import usePhoneStore from "@/store/phone";
+import defaultPhoneOutline from "@/assets/phone/phone_container.webp";
+import PhoneScreenList from "@/components/phone/PhoneScreenList";
 
 export default function Phone() {
-    const { 
-        views, 
-        viewIndex, 
+    const {  
         isDiverged,
-        divergence,
-        // @ts-ignore
-        incrementIndex,
-        // @ts-ignore
-        decrementIndex
+        divergence
     } = usePhoneStore((state) => state);
-    const currentView = views[viewIndex] as PhoneGridAppList || [];
-
+    
     return (
-        <PhoneContainer>
-            <PhoneHeader />
-            {
-                isDiverged 
-                    ? divergence
-                    : <>
-                        <PhoneGrid apps={currentView} />
-                        <PhoneDock />
-                    </>
-            }
-        </PhoneContainer>
+        <div className="relative h-[32rem] flex justify-center items-center">
+            <img
+                src={defaultPhoneOutline}
+                className="z-30 w-full h-full object-contain pointer-events-none"
+            />
+            <div className="absolute top-0 flex h-full w-[90%] pt-[2%] sm:pt-[4%] pb-[4%] pl-[17%] pr-[17%] sm:pr-[1%] sm:pl-[2%] overflow-hidden">
+                <div className="h-full min-w-full flex justify-evenly flex-col bg-phone-background bg-cover bg-center">
+                    <PhoneHeader />
+                    {isDiverged && 
+                        <div className="absolute top-0 h-full w-full pt-[2%] sm:pt-[5%] pb-[4%] pr-[38%] sm:pr-[4%] overflow-hidden z-10">
+                            {divergence}
+                        </div>
+                    }
+                    <PhoneScreenList />
+                    <PhoneDock />
+                </div>
+            </div>
+        </div>
     )
 }

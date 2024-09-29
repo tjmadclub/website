@@ -9,7 +9,7 @@ export interface PhoneGridProps {
 export default function PhoneGrid({ apps }: PhoneGridProps) {
     const appsInGrid = apps.map((app: PhoneAppProps & { name: string } | null, index: number) => {
         if (!app)
-            return <div key={index} className="w-12 h-12 p-1"></div>;
+            return <div key={index} className="w-full p-1"></div>;
         return (
             <div key={index} className="flex flex-col justify-center items-center text-center">
                 <PhoneApp {...app} />
@@ -19,7 +19,7 @@ export default function PhoneGrid({ apps }: PhoneGridProps) {
     });
 
     return (
-        <div className="grid grid-cols-4 gap-x-6 gap-y-3 mt-4 mx-4">
+        <div className="grid grid-cols-4 gap-x-1 gap-y-2 mt-4 px-[10%]">
             {appsInGrid}
         </div>
     );
