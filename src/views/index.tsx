@@ -2,6 +2,7 @@ import githubLogo from "@/assets/phone/apps/github.webp";
 import facebookLogo from "@/assets/phone/apps/facebook.webp";
 import discordLogo from "@/assets/phone/apps/discord.webp";
 import instagramLogo from "@/assets/phone/apps/instagram.webp";
+import ionLogo from "@/assets/phone/apps/ion.webp";
 
 import razaPhoto from "@/assets/phone/officers/raza.webp";
 import shayanPhoto from "@/assets/phone/officers/shayan.webp";
@@ -43,7 +44,9 @@ export const defaultViews = [
         null,
         null,
         null,
-        { name: "Github", logo: githubLogo, isLink: true, link: "https://github.com/tjmadclub" }
+        { name: "Github", logo: githubLogo, isLink: true, link: "https://github.com/tjmadclub" },
+        null,
+        { name: "Ion", logo: ionLogo, isLink: true, link: "https://ion.tjhsst.edu/eighth" }
     ],
     [
         null,

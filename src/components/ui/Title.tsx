@@ -1,0 +1,47 @@
+import tjMadLogo from "@/assets/brand/tjmad_logo_wordmark.webp";
+import androidLogo from "@/assets/title/android_logo.webp";
+import androidStudioLogo from "@/assets/title/android_studio.webp";
+import appStoreLogo from "@/assets/title/app_store.webp";
+import playStoreLogo from "@/assets/title/play_store.webp";
+import figmaLogo from "@/assets/title/figma.webp";
+
+export default function Title() {
+    return (
+        <div className="relative flex flex-col flex-grow-0 basis-1/2 justify-center items-center">
+            <div className="relative w-[75%] h-[75%] mt-[10%]">
+                <img
+                    src={tjMadLogo}
+                    className="relative w-full h-full object-contain pointer-events-none z-10"
+                />
+                <img
+                    src={androidLogo}
+                    className="absolute w-[50%] h-[50%] object-contain top-[-40%] left-[-25%] rotate-[-20deg] z-20"
+                />
+                <img
+                    src={playStoreLogo}
+                    className="absolute w-[50%] h-[50%] object-contain top-[-30%] right-[-20%] rotate-[-15deg]"
+                />
+                <img
+                    src={appStoreLogo}
+                    className="absolute w-[50%] h-[50%] object-contain bottom-[-25%] left-[-12%] rotate-[-10deg]"
+                />
+                <img
+                    src={figmaLogo}
+                    className="absolute w-[50%] h-[50%] object-contain bottom-[-20%] right-[-2%] rotate-[10deg] z-20"
+                />
+                <img
+                    src={androidStudioLogo}
+                    className="absolute w-[50%] h-[50%] object-contain top-[-25%] right-[34%] rotate-[10deg]"
+                />
+            </div>
+            <p className="mt-[7.5%] text-center sm:mb-[10%] w-[75%] h-[75%]">
+                A club at <a 
+                    className="text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                    href="https://tjhsst.fcps.edu/"
+                >
+                    TJHSST
+                </a> with the goal to design, build, and publish mobile applications on iOS & Android
+            </p>
+        </div>
+    )
+}
