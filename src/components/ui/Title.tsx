@@ -34,14 +34,22 @@ export default function Title() {
                     className="absolute w-[50%] h-[50%] object-contain top-[-25%] right-[34%] rotate-[10deg]"
                 />
             </div>
-            <p className="mt-[7.5%] text-center sm:mb-[10%] w-[75%] h-[75%]">
-                A club at <a 
-                    className="text-blue-600 hover:text-blue-800 visited:text-purple-600"
-                    href="https://tjhsst.fcps.edu/"
+            <div className="relative flex justify-center text-center items-center flex-col gap-y-5 w-[75%] h-[75%] mt-[7.5%] sm:mb-[10%]">
+                <p>
+                    A club at <a 
+                        className="text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                        href="https://tjhsst.fcps.edu/"
+                    >
+                        TJHSST
+                    </a> with the goal to design, build, and publish mobile applications on iOS & Android
+                </p>
+                <a 
+                    href="https://ion.tjhsst.edu/eighth"
+                    className="py-2 px-6 rounded text-white bg-purple-600"
                 >
-                    TJHSST
-                </a> with the goal to design, build, and publish mobile applications on iOS & Android
-            </p>
+                    Sign Up
+                </a>
+            </div>
         </div>
     )
 }
