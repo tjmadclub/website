@@ -41,7 +41,7 @@ export default function PhoneScreenList({ children }: React.PropsWithChildren) {
     };
     
     return (
-        <div className="absolute top-0 h-full w-full mt-[3%] sm:mt-[5%] pb-[10%] pr-[38%] sm:pr-[4%] overflow-hidden z-10">
+        <div className="absolute top-0 h-full w-full mt-[7%] pb-[15%] pr-[4%] overflow-hidden z-10">
             <div 
                 className="h-full w-full"
                 style={{ 

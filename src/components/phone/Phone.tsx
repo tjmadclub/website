@@ -12,12 +12,12 @@ export default function Phone() {
     } = usePhoneStore((state) => state);
     
     return (
-        <div className="relative h-[32rem] flex justify-center items-center">
+        <div className="relative h-[32rem] w-[16rem] flex justify-center items-center">
             <img
                 src={defaultPhoneOutline}
                 className="z-30 w-full h-full object-contain pointer-events-none"
             />
-            <div className="absolute top-0 flex h-full w-[90%] pt-[2%] sm:pt-[4%] pb-[4%] pl-[17%] pr-[17%] sm:pr-[1%] sm:pl-[2%] overflow-hidden">
+            <div className="absolute top-0 flex h-full w-[90%] pt-[7%] pb-[7%] pr-[1%] pl-[2%] overflow-hidden">
                 <div className="h-full min-w-full flex justify-evenly flex-col bg-phone-background bg-cover bg-center overflow-hidden">
                     <PhoneHeader />
                     {isDiverged && 
