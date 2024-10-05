@@ -1,9 +1,9 @@
 import tjMadLogo from "@/assets/brand/tjmad_logo_wordmark.webp";
-import androidLogo from "@/assets/title/android_logo.webp";
-import androidStudioLogo from "@/assets/title/android_studio.webp";
-import appStoreLogo from "@/assets/title/app_store.webp";
-import playStoreLogo from "@/assets/title/play_store.webp";
-import figmaLogo from "@/assets/title/figma.webp";
+import androidLogo from "@/assets/slideshow/title/android_logo.webp";
+import androidStudioLogo from "@/assets/slideshow/title/android_studio.webp";
+import appStoreLogo from "@/assets/slideshow/title/app_store.webp";
+import playStoreLogo from "@/assets/slideshow/title/play_store.webp";
+import figmaLogo from "@/assets/slideshow/title/figma.webp";
 
 export default function TitleScreen() {
     return (
@@ -37,7 +37,7 @@ export default function TitleScreen() {
             <div className="relative flex justify-center text-center items-center flex-col gap-y-5 mt-[7.5%]">
                 <p>
                     A club at <a 
-                        className="text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                        className="link"
                         href="https://tjhsst.fcps.edu/"
                     >
                         TJHSST
@@ -46,6 +46,7 @@ export default function TitleScreen() {
                 <a 
                     href="https://ion.tjhsst.edu/eighth"
                     className="py-2 px-6 rounded text-white bg-purple-600"
+                    target="_blank"
                 >
                     Sign Up
                 </a>
