@@ -4,6 +4,8 @@ import Slideshow from "@/components/ui/Slideshow";
 import TitleScreen from "@/components/ui/TitleScreen";
 import TeamScreen from "@/components/ui/TeamScreen";
 import LectureScreen from "@/components/ui/LectureScreen";
+import ProjectScreen from "@/components/ui/ProjectScreen";
+import ResourceScreen from "@/components/ui/ResourceScreen";
 import ContactScreen from "@/components/ui/ContactScreen";
 
 export default function App() {
@@ -16,6 +18,8 @@ export default function App() {
                         <TitleScreen />,
                         <TeamScreen />,
                         <LectureScreen />,
+                        <ProjectScreen />,
+                        <ResourceScreen />,
                         <ContactScreen />
                     ]}
                 />
