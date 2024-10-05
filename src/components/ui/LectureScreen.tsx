@@ -43,7 +43,7 @@ export default function LectureScreen() {
                 </p>
                 <a 
                     href="https://github.com/tjmadclub/lectures"
-                    className="py-2 px-6 rounded text-white bg-gray-600 text-sm"
+                    className="py-2 px-6 rounded text-white bg-gray-600"
                     target="_blank"
                 >
                     GitHub Repository

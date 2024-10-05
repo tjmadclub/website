@@ -14,12 +14,11 @@ export default function Slideshow({ screens }: SlideshowProps) {
     } = usePhoneStore((state) => state);
 
     return (
-        <div className="relative flex flex-col flex-grow-0 basis-1/2 justify-center items-center mt-[10%] sm:mb-[10%]">
+        <div className="relative flex flex-col flex-grow-0 basis-1/2 justify-between items-center pt-[10%] sm:pb-[10%] h-[32rem]">
             <div className="w-[75%] h-[75%]">
                 {screens[viewIndex]}
             </div>
-            <div className="flex justify-evenly mt-[5%] gap-x-20">
-                {/* TODO: bound decrementing and incrementing to [0, views.length] */}
+            <div className="flex justify-evenly mt-auto pt-[15%] gap-x-20">
                 <button
                     onClick={() => decrementIndex()}
                 >

@@ -18,8 +18,12 @@ const usePhoneStore = create<PhoneState>()((set) => ({
     isDiverged: false,
     divergence: null,
     setDivergence: (diverge: boolean, view?: React.ReactNode) => set(() => ({ isDiverged: diverge, divergence: view })),
-    incrementIndex: () => set((state) => ({ viewIndex: state.viewIndex + 1 })),
-    decrementIndex: () => set((state) => ({ viewIndex: state.viewIndex - 1 })),
+    incrementIndex: () => set((state) => ({ 
+        viewIndex: state.viewIndex < state.views.length -1 ? state.viewIndex + 1 : state.viewIndex 
+    })),
+    decrementIndex: () => set((state) => ({
+        viewIndex: state.viewIndex > 0 ? state.viewIndex - 1 : state.viewIndex
+    })),
 }));
 
 export default usePhoneStore;

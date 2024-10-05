@@ -34,7 +34,7 @@ export default function TitleScreen() {
                     className="absolute w-[50%] h-[50%] object-contain top-[-25%] right-[34%] rotate-[10deg]"
                 />
             </div>
-            <div className="relative flex justify-center text-center items-center flex-col gap-y-5 mt-[7.5%]">
+            <div className="relative flex justify-center text-center items-center flex-col gap-y-5 mt-[20%] sm:mt-[12%]">
                 <p>
                     A club at <a 
                         className="link"

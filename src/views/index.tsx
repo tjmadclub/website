@@ -65,5 +65,18 @@ export const defaultViews = [
         null,
         null,
         { name: "Jude", logo: judePhoto, isLink: false, onClick: () => divergeToOfficerView("Jude Caldwell", judePhoto, "VP of Finance", "") }
+    ],
+    // TODO: fill out apps for next pages
+    [
+        null
+    ],
+    [
+        null
+    ],
+    [
+        null
+    ],
+    [
+        null
     ]
 ];
