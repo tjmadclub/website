@@ -3,7 +3,8 @@ import Navbar from "@/components/ui/Navbar";
 import Slideshow from "@/components/ui/Slideshow";
 import TitleScreen from "@/components/ui/TitleScreen";
 import TeamScreen from "@/components/ui/TeamScreen";
-import LectureScreen from "./components/ui/LectureScreen";
+import LectureScreen from "@/components/ui/LectureScreen";
+import ContactScreen from "@/components/ui/ContactScreen";
 
 export default function App() {
     return (
@@ -14,7 +15,8 @@ export default function App() {
                     screens={[
                         <TitleScreen />,
                         <TeamScreen />,
-                        <LectureScreen />
+                        <LectureScreen />,
+                        <ContactScreen />
                     ]}
                 />
                 <Phone />
