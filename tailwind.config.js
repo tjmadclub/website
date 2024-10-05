@@ -13,6 +13,9 @@ export default {
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans]
+      },
+      colors: {
+        "tjmad-red": "#c43540"
       }
     },
   },

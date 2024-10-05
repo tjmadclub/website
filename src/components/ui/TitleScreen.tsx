@@ -5,10 +5,10 @@ import appStoreLogo from "@/assets/title/app_store.webp";
 import playStoreLogo from "@/assets/title/play_store.webp";
 import figmaLogo from "@/assets/title/figma.webp";
 
-export default function Title() {
+export default function TitleScreen() {
     return (
-        <div className="relative flex flex-col justify-center items-center">
-            <div className="relative w-[75%] h-[75%]">
+        <div className="relative flex flex-col justify-center items-center w-full h-full">
+            <div className="relative">
                 <img
                     src={tjMadLogo}
                     className="relative w-full h-full object-contain pointer-events-none z-10"
@@ -34,7 +34,7 @@ export default function Title() {
                     className="absolute w-[50%] h-[50%] object-contain top-[-25%] right-[34%] rotate-[10deg]"
                 />
             </div>
-            <div className="relative flex justify-center text-center items-center flex-col gap-y-5 w-[75%] h-[75%] mt-[7.5%]">
+            <div className="relative flex justify-center text-center items-center flex-col gap-y-5 mt-[7.5%]">
                 <p>
                     A club at <a 
                         className="text-blue-600 hover:text-blue-800 visited:text-purple-600"
