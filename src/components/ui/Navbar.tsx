@@ -12,11 +12,10 @@ export default function Navbar() {
                 />
             </a>
             <div className="flex justify-center items-center gap-x-5">
-                {/* Temporary links for styling purposes */}
                 <a href="/about">
                     About
                 </a>
-                <a href="/lectures">
+                <a href="https://github.com/tjmadclub/lectures">
                     Lectures
                 </a>
                 <a href="/projects">

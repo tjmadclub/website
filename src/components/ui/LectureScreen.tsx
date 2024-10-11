@@ -3,8 +3,6 @@ import flutterLogo from "@/assets/slideshow/lectures/flutter.webp";
 import dartLogo from "@/assets/slideshow/lectures/dart.webp";
 import cogSymbol from "@/assets/slideshow/lectures/cog.webp";
 import brainSymbol from "@/assets/slideshow/lectures/brain.webp";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 export default function LectureScreen() {
     return (
@@ -34,24 +32,13 @@ export default function LectureScreen() {
             </div>
             <div className="relative w-full flex justify-center text-center items-center flex-col gap-y-5 mt-[20%] sm:mt-[10%]">
                 <p>
-                    Lectures by TJMAD can be found <a
-                        href="/lectures"
+                    Lectures and all related information by TJMAD can be found in the <a
+                        href="https://github.com/tjmadclub/lectures"
                         className="link"
                     >
-                        here
-                    </a> or directly in the GitHub repository.
+                        GitHub repository
+                    </a>, organized by year and date.
                 </p>
-                <a 
-                    href="https://github.com/tjmadclub/lectures"
-                    className="py-2 px-6 rounded text-white bg-gray-600"
-                    target="_blank"
-                >
-                    GitHub Repository
-                    <FontAwesomeIcon 
-                        icon={faArrowUpRightFromSquare} 
-                        className="ml-3" 
-                    />
-                </a>
             </div>
         </div>
     );

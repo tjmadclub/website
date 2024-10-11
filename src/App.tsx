@@ -1,30 +1,14 @@
-import Phone from "@/components/phone/Phone";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "@/components/ui/Navbar";
-import Slideshow from "@/components/ui/Slideshow";
-import TitleScreen from "@/components/ui/TitleScreen";
-import TeamScreen from "@/components/ui/TeamScreen";
-import LectureScreen from "@/components/ui/LectureScreen";
-import ProjectScreen from "@/components/ui/ProjectScreen";
-import ResourceScreen from "@/components/ui/ResourceScreen";
-import ContactScreen from "@/components/ui/ContactScreen";
+import Home from "@/pages/Home";
 
 export default function App() {
     return (
-        <main className="flex flex-col items-center justify-evenly min-h-screen sm:max-h-screen">
+        <main className="flex flex-col items-center min-h-screen sm:max-h-screen">
             <Navbar />
-            <div className="w-full flex flex-col sm:flex-row justify-evenly items-center space-y-20 sm:space-y-0 py-10 overflow-x-hidden sm:overflow-hidden">
-                <Slideshow
-                    screens={[
-                        <TitleScreen />,
-                        <TeamScreen />,
-                        <LectureScreen />,
-                        <ProjectScreen />,
-                        <ResourceScreen />,
-                        <ContactScreen />
-                    ]}
-                />
-                <Phone />
-            </div>
+            <Routes>
+                <Route path="/" element={<Home />} />
+            </Routes>
         </main>
     );
 }
