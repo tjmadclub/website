@@ -37,12 +37,11 @@ export default function Navbar() {
                     </button>
                 </div>
             </div>
-            <div className={`${isOpen ? "flex flex-col gap-y-2 mt-5 [&_a]:w-full [&_a]:p-2" : "hidden"} md:flex justify-center items-start md:items-center md:gap-x-5`}>
-                <a className="hover:bg-gray-100 rounded" href="/about">About</a>
-                <a className="hover:bg-gray-100 rounded" href="https://github.com/tjmadclub/lectures">Lectures</a>
-                <a className="hover:bg-gray-100 rounded" href="/projects">Projects</a>
-                <a className="hover:bg-gray-100 rounded" href="/resources">Resources</a>
-                <a className="hover:bg-gray-100 rounded" href="https://www.instagram.com/tj_madclub/">Gallery</a>
+            <div className={`${isOpen ? "flex flex-col gap-y-2 mt-5 [&_a]:w-full" : "hidden"} md:flex justify-center items-start md:items-center md:gap-x-5`}>
+                <a className="hover:bg-gray-100 rounded p-2" href="/about">About</a>
+                <a className="hover:bg-gray-100 rounded p-2" href="https://github.com/tjmadclub/lectures">Lectures</a>
+                <a className="hover:bg-gray-100 rounded p-2" href="/projects">Projects</a>
+                <a className="hover:bg-gray-100 rounded p-2" href="/resources">Resources</a>
                 <a 
                     href="https://ion.tjhsst.edu/eighth"
                     className="py-2 px-6 rounded text-white bg-tjmad-blue"
