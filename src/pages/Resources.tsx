@@ -89,7 +89,7 @@ const resources: ResourceSectionProps[] = [
 
 export default function Resources() {
     return (
-        <div className="flex flex-col pt-20 pb-5 px-16 sm:px-20 justify-center items-center w-full">
+        <div className="flex flex-grow flex-col pt-20 pb-5 px-16 sm:px-20 justify-center items-center w-full">
             <div className="w-full md:w-3/4 lg:w-1/2">
                 <h1
                     className="font-extrabold text-6xl text-tjmad-red mb-5 text-center"

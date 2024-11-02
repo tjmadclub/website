@@ -3,12 +3,10 @@ import contactSlide from "@/assets/slideshow/contact.webp";
 export default function ContactScreen() {
     return (
         <div className="relative flex flex-col justify-center items-center w-full h-full">
-            <div className="relative">
-                <img
-                    src={contactSlide}
-                    className="relative w-full h-full object-contain pointer-events-none z-10"
-                />
-            </div>
+            <img
+                src={contactSlide}
+                className="relative w-4/5 object-contain pointer-events-none z-10"
+            />
             <div className="relative w-full flex justify-center text-center items-center flex-col gap-y-5 mt-[10%] sm:mt-[5%]">
                 <p>
                     You can contact the TJMAD officer team at <a

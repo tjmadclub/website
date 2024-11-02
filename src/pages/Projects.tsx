@@ -23,7 +23,7 @@ const projects: ProjectCardProps[] = [
 
 export default function Projects() {
     return (
-        <div className="flex flex-col pt-20 pb-5 px-16 sm:px-20 w-full">
+        <div className="flex flex-grow flex-col pt-20 pb-5 px-16 sm:px-20 w-full">
             <h1
                 className="font-extrabold text-6xl text-tjmad-blue mb-5 text-left"
             >

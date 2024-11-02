@@ -3,7 +3,7 @@ import clubMeetingPhoto from "@/assets/pages/club_meeting.webp";
 
 export default function About() {
     return (
-        <div className="w-full flex flex-col justify-center items-center pt-20 px-15 sm:px-20">
+        <div className="w-full flex-grow flex flex-col justify-center items-center pt-20 px-15 sm:px-20">
             <h1
                 className="font-extrabold text-6xl text-tjmad-red mb-5 text-center"
             >

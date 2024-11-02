@@ -3,12 +3,10 @@ import projectSlide from "@/assets/slideshow/projects.webp";
 export default function ProjectScreen() {
     return (
         <div className="relative flex flex-col justify-center items-center w-full h-full">
-            <div className="relative">
-                <img
-                    src={projectSlide}
-                    className="relative w-full h-full object-contain pointer-events-none z-10"
-                />
-            </div>
+            <img
+                src={projectSlide}
+                className="relative w-4/5 object-contain pointer-events-none z-10"
+            />
             <div className="relative w-full flex justify-center text-center items-center flex-col gap-y-5 mt-[10%] sm:mt-[5%]">
                 <p>
                     Our previous club-wide projects can be found <a

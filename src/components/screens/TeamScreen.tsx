@@ -3,12 +3,10 @@ import officerSlide from "@/assets/slideshow/officers.webp";
 export default function TeamScreen() {
     return (
         <div className="relative flex flex-col justify-center items-center w-full h-full">
-            <div className="relative">
-                <img
-                    src={officerSlide}
-                    className="relative w-full h-full object-contain pointer-events-none z-10"
-                />
-            </div>
+            <img
+                src={officerSlide}
+                className="relative w-4/5 object-contain pointer-events-none z-10"
+            />
             <div className="relative w-full flex justify-center text-center items-center flex-col mt-[10%] sm:mt-[5%] whitespace-nowrap">
                 <p className="pb-5">The officers for the 2024-2025 year are:</p>
                 <div className="flex justify-evenly gap-x-10 items-center text-gray-950">

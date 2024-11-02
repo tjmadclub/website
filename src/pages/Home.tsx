@@ -9,7 +9,7 @@ import TitleScreen from "@/components/screens/TitleScreen";
 
 export default function Home() {
     return (
-        <div className="w-full flex flex-col md:flex-row justify-evenly items-center space-y-20 md:space-y-0 py-10 md:overflow-hidden">
+        <div className="w-full flex-grow flex flex-col md:flex-row justify-evenly items-center space-y-20 md:space-y-0 py-10 md:overflow-hidden">
             <Slideshow
                 screens={[
                     <TitleScreen />,
