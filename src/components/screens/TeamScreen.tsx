@@ -1,53 +1,15 @@
-import razaPhoto from "@/assets/phone/officers/raza.webp";
-import shayanPhoto from "@/assets/phone/officers/shayan.webp";
-import loganPhoto from "@/assets/phone/officers/logan.webp";
-import ishanPhoto from "@/assets/phone/officers/ishan.webp";
-import ryanPhoto from "@/assets/phone/officers/ryan.webp";
-import judePhoto from "@/assets/phone/officers/jude.webp";
+import officerSlide from "@/assets/slideshow/officers.webp";
 
 export default function TeamScreen() {
     return (
         <div className="relative flex flex-col justify-center items-center w-full h-full">
             <div className="relative">
-                <span className="relative font-extrabold text-7xl sm:text-[8rem] text-tjmad-red z-10">Officers</span>
-                <div className="absolute h-[50%] top-[-20%] left-[-5%] rotate-[-10deg] rounded-md overflow-hidden z-20">
-                    <img
-                        src={razaPhoto}
-                        className="h-full object-contain"
-                    />
-                </div>
-                <div className="absolute h-[50%] bottom-[-20%] left-[5%] rotate-[5deg] rounded-md overflow-hidden">
-                    <img
-                        src={shayanPhoto}
-                        className="h-full object-contain"
-                    />
-                </div>
-                <div className="absolute h-[50%] top-[-10%] right-[-5%] rotate-[10deg] rounded-md overflow-hidden">
-                    <img
-                        src={loganPhoto}
-                        className="h-full object-contain"
-                    />
-                </div>
-                <div className="absolute h-[50%] bottom-[-25%] left-[40%] rotate-[-10deg] rounded-md overflow-hidden">
-                    <img
-                        src={ishanPhoto}
-                        className="h-full object-contain"
-                    />
-                </div>
-                <div className="absolute h-[50%] bottom-[-25%] right-[15%] rotate-[5deg] rounded-md overflow-hidden z-20">
-                    <img
-                        src={ryanPhoto}
-                        className="h-full object-contain"
-                    />
-                </div>
-                <div className="absolute h-[50%] top-[-15%] right-[40%] rotate-[10deg] rounded-md overflow-hidden">
-                    <img
-                        src={judePhoto}
-                        className="h-full object-contain"
-                    />
-                </div>
+                <img
+                    src={officerSlide}
+                    className="relative w-full h-full object-contain pointer-events-none z-10"
+                />
             </div>
-            <div className="relative w-full flex justify-center text-center items-center flex-col mt-[20%] sm:mt-[12%] whitespace-nowrap">
+            <div className="relative w-full flex justify-center text-center items-center flex-col mt-[10%] sm:mt-[5%] whitespace-nowrap">
                 <p className="pb-5">The officers for the 2024-2025 year are:</p>
                 <div className="flex justify-evenly gap-x-10 items-center text-gray-950">
                     <ul className="text-left list-disc">

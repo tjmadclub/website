@@ -13,7 +13,7 @@ export default function PhoneGrid({ apps }: PhoneGridProps) {
         return (
             <div key={index} className="flex flex-col justify-center items-center text-center">
                 <PhoneApp {...app} />
-                <span className="text-[0.6rem] text-white font-medium">{app.name}</span>
+                <span className="text-[0.545rem] text-white font-medium">{app.name}</span>
             </div>
         );
     });

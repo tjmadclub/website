@@ -1,6 +1,6 @@
 import githubLogo from "@/assets/phone/apps/github.webp";
-import appStoreLogo from "@/assets/slideshow/title/app_store.webp";
-import playStoreLogo from "@/assets/slideshow/title/play_store.webp";
+import appStoreLogo from "@/assets/phone/apps/app_store.webp";
+import playStoreLogo from "@/assets/phone/apps/play_store.webp";
 
 export interface ProjectCardProps {
     name: string;
