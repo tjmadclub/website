@@ -1,50 +1,56 @@
-# React + TypeScript + Vite
+![TJMAD Club Homepage](/tjmad_club_homepage.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# TJMAD Club Website
 
-Currently, two official plugins are available:
+This repository hosts the code for the [TJMAD club site](https://activities.tjhsst.edu/mobileapps). 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## For Contributors/Future Developers
 
-## Expanding the ESLint configuration
+The site is made using React, TypeScript and Vite. To host the site on TJ domains, you must use 
+[Director](https://director.tjhsst.edu) and ask the sponsor/eighth period office for access to the 
+project. 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+All assets are in the `src/assets` folder and in WebP format. Assets that may be frequently changed
+have PDN files, which can be provided upon request.
 
-- Configure the top-level `parserOptions` property like this:
+To contribute to the site, you will first need to install:
+* [nodejs](https://nodejs.org)
+* [git](https://git-scm.com)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Then, you can clone the repository onto your computer by running:
+```bash
+git clone https://github.com/tjmadclub/website
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+`cd` into the new directory, and install the required packages:
+```bash
+npm install
+```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Now, the setup is complete and you can start contributing!
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### Helpful Info
+
+Below are the necessary commands to interact with the project:
+
+To build the site, run the following command,
+```bash
+npm run build
+```
+
+To run the Vite development server, run the following command,
+```bash
+npm run dev
+```
+
+To preview the site, you can use,
+```bash
+npm run preview
+```
+
+However, if you want to run the build on a production server (e.g., for Director), 
+you can use the `serve` package,
+```bash
+npm i -g serve
+npx serve dist
 ```
