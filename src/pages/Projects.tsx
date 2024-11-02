@@ -23,7 +23,7 @@ const projects: ProjectCardProps[] = [
 
 export default function Projects() {
     return (
-        <div className="flex flex-col pt-20 pb-5 px-16 sm:px-20">
+        <div className="flex flex-col pt-20 pb-5 px-16 sm:px-20 w-full">
             <h1
                 className="font-extrabold text-6xl text-tjmad-blue mb-5 text-left"
             >
@@ -34,9 +34,12 @@ export default function Projects() {
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-2 mt-4">
                 {
-                    projects.map((project: ProjectCardProps) => {
+                    projects.map((project: ProjectCardProps, index: number) => {
                         return (
-                            <div className="w-full h-full">
+                            <div 
+                                key={index}
+                                className="w-full h-full"
+                            >
                                 <ProjectCard {...project} />
                             </div>
                         );
