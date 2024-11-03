@@ -14,7 +14,7 @@ export default function OfficerView({
     description 
 }: OfficerViewProps) {
     return (
-        <div className="h-full w-full flex flex-col font-light text-sm items-center p-5 pt-10 break-words overflow-y-scroll z-20 bg-[#11161c] text-white">
+        <div className="h-full w-full flex flex-col hide-scrollbar font-light text-sm items-center p-5 pt-10 break-words overflow-y-scroll z-20 bg-[#11161c] text-white">
             <img 
                 src={image}
                 className="object-contain w-3/4 rounded-2xl my-3"

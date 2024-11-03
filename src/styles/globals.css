@@ -13,3 +13,13 @@
 .link {
     @apply text-blue-600 hover:text-blue-800 visited:text-purple-600
 }
+
+/* reference: https://stackoverflow.com/questions/66416614/how-to-create-scrollable-element-in-tailwind-without-a-scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
